@@ -16,6 +16,13 @@
 		7647AD7B27900706001B6308 /* SimpleBillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD7A27900706001B6308 /* SimpleBillTests.swift */; };
 		7647AD8527900706001B6308 /* SimpleBillUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD8427900706001B6308 /* SimpleBillUITests.swift */; };
 		7647AD8727900706001B6308 /* SimpleBillUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD8627900706001B6308 /* SimpleBillUITestsLaunchTests.swift */; };
+		7647AD9627900920001B6308 /* WriteOneBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD9527900920001B6308 /* WriteOneBill.swift */; };
+		7647AD982790092E001B6308 /* ReadBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD972790092E001B6308 /* ReadBill.swift */; };
+		7647AD9A27900946001B6308 /* BillData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD9927900946001B6308 /* BillData.swift */; };
+		7647AD9C27900973001B6308 /* TopMainCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD9B27900973001B6308 /* TopMainCardView.swift */; };
+		7647AD9E279009A6001B6308 /* BillCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD9D279009A6001B6308 /* BillCellView.swift */; };
+		7647ADA027900A28001B6308 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD9F27900A28001B6308 /* HomeView.swift */; };
+		7647ADA627900B13001B6308 /* Backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647ADA527900B13001B6308 /* Backup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,13 @@
 		7647AD8027900706001B6308 /* SimpleBillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleBillUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7647AD8427900706001B6308 /* SimpleBillUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBillUITests.swift; sourceTree = "<group>"; };
 		7647AD8627900706001B6308 /* SimpleBillUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBillUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7647AD9527900920001B6308 /* WriteOneBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteOneBill.swift; sourceTree = "<group>"; };
+		7647AD972790092E001B6308 /* ReadBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBill.swift; sourceTree = "<group>"; };
+		7647AD9927900946001B6308 /* BillData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillData.swift; sourceTree = "<group>"; };
+		7647AD9B27900973001B6308 /* TopMainCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMainCardView.swift; sourceTree = "<group>"; };
+		7647AD9D279009A6001B6308 /* BillCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillCellView.swift; sourceTree = "<group>"; };
+		7647AD9F27900A28001B6308 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7647ADA527900B13001B6308 /* Backup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +112,15 @@
 		7647AD6327900704001B6308 /* SimpleBill */ = {
 			isa = PBXGroup;
 			children = (
+				7647AD9427900779001B6308 /* UI */,
+				7647AD932790076D001B6308 /* UserData */,
 				7647AD6427900704001B6308 /* SimpleBillApp.swift */,
 				7647AD6627900704001B6308 /* ContentView.swift */,
 				7647AD6827900706001B6308 /* Assets.xcassets */,
 				7647AD6D27900706001B6308 /* Persistence.swift */,
 				7647AD6F27900706001B6308 /* SimpleBill.xcdatamodeld */,
 				7647AD6A27900706001B6308 /* Preview Content */,
+				7647ADA527900B13001B6308 /* Backup.swift */,
 			);
 			path = SimpleBill;
 			sourceTree = "<group>";
@@ -131,6 +148,58 @@
 				7647AD8627900706001B6308 /* SimpleBillUITestsLaunchTests.swift */,
 			);
 			path = SimpleBillUITests;
+			sourceTree = "<group>";
+		};
+		7647AD932790076D001B6308 /* UserData */ = {
+			isa = PBXGroup;
+			children = (
+				7647ADA427900A83001B6308 /* WriteRead */,
+				7647ADA327900A76001B6308 /* CoreData */,
+			);
+			path = UserData;
+			sourceTree = "<group>";
+		};
+		7647AD9427900779001B6308 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7647ADA127900A4F001B6308 /* Home */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7647ADA127900A4F001B6308 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7647ADA227900A62001B6308 /* SubView */,
+				7647AD9F27900A28001B6308 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7647ADA227900A62001B6308 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				7647AD9B27900973001B6308 /* TopMainCardView.swift */,
+				7647AD9D279009A6001B6308 /* BillCellView.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		7647ADA327900A76001B6308 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7647AD9927900946001B6308 /* BillData.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		7647ADA427900A83001B6308 /* WriteRead */ = {
+			isa = PBXGroup;
+			children = (
+				7647AD9527900920001B6308 /* WriteOneBill.swift */,
+				7647AD972790092E001B6308 /* ReadBill.swift */,
+			);
+			path = WriteRead;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,10 +332,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7647AD9E279009A6001B6308 /* BillCellView.swift in Sources */,
+				7647ADA627900B13001B6308 /* Backup.swift in Sources */,
 				7647AD7127900706001B6308 /* SimpleBill.xcdatamodeld in Sources */,
+				7647AD9A27900946001B6308 /* BillData.swift in Sources */,
+				7647ADA027900A28001B6308 /* HomeView.swift in Sources */,
 				7647AD6E27900706001B6308 /* Persistence.swift in Sources */,
 				7647AD6727900704001B6308 /* ContentView.swift in Sources */,
 				7647AD6527900704001B6308 /* SimpleBillApp.swift in Sources */,
+				7647AD9C27900973001B6308 /* TopMainCardView.swift in Sources */,
+				7647AD982790092E001B6308 /* ReadBill.swift in Sources */,
+				7647AD9627900920001B6308 /* WriteOneBill.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
