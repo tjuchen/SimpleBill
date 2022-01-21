@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		761D70CA279A92E50032A4C2 /* HomeView+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761D70C9279A92E50032A4C2 /* HomeView+Data.swift */; };
+		761D70CE279A9BD90032A4C2 /* CustomUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761D70CD279A9BD90032A4C2 /* CustomUI.swift */; };
+		76427C8F27996B2500584AA6 /* CalendarPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76427C8E27996B2500584AA6 /* CalendarPanel.swift */; };
+		76427C9327996B5E00584AA6 /* SearchBillPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76427C9227996B5E00584AA6 /* SearchBillPanel.swift */; };
 		7647AD6527900704001B6308 /* SimpleBillApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD6427900704001B6308 /* SimpleBillApp.swift */; };
 		7647AD6727900704001B6308 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD6627900704001B6308 /* ContentView.swift */; };
 		7647AD6927900706001B6308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7647AD6827900706001B6308 /* Assets.xcassets */; };
@@ -23,6 +27,10 @@
 		7647AD9E279009A6001B6308 /* BillCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD9D279009A6001B6308 /* BillCellView.swift */; };
 		7647ADA027900A28001B6308 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD9F27900A28001B6308 /* HomeView.swift */; };
 		7647ADA627900B13001B6308 /* Backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647ADA527900B13001B6308 /* Backup.swift */; };
+		764CA4DF279546420087BD4C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CA4DE279546420087BD4C /* Const.swift */; };
+		764CA4E227954B780087BD4C /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CA4E127954B780087BD4C /* HomeModel.swift */; };
+		764CA4E427956EF80087BD4C /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CA4E327956EF80087BD4C /* Frame.swift */; };
+		764CA4E6279599BB0087BD4C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CA4E5279599BB0087BD4C /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		761D70C9279A92E50032A4C2 /* HomeView+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+Data.swift"; sourceTree = "<group>"; };
+		761D70CD279A9BD90032A4C2 /* CustomUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUI.swift; sourceTree = "<group>"; };
+		76427C8E27996B2500584AA6 /* CalendarPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPanel.swift; sourceTree = "<group>"; };
+		76427C9227996B5E00584AA6 /* SearchBillPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBillPanel.swift; sourceTree = "<group>"; };
 		7647AD6127900704001B6308 /* SimpleBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7647AD6427900704001B6308 /* SimpleBillApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBillApp.swift; sourceTree = "<group>"; };
 		7647AD6627900704001B6308 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +74,10 @@
 		7647AD9D279009A6001B6308 /* BillCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillCellView.swift; sourceTree = "<group>"; };
 		7647AD9F27900A28001B6308 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7647ADA527900B13001B6308 /* Backup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backup.swift; sourceTree = "<group>"; };
+		764CA4DE279546420087BD4C /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		764CA4E127954B780087BD4C /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		764CA4E327956EF80087BD4C /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
+		764CA4E5279599BB0087BD4C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76427C8B27996AE700584AA6 /* ToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				76427C8E27996B2500584AA6 /* CalendarPanel.swift */,
+				76427C9227996B5E00584AA6 /* SearchBillPanel.swift */,
+			);
+			path = ToolBar;
+			sourceTree = "<group>";
+		};
 		7647AD5827900704001B6308 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +137,7 @@
 		7647AD6327900704001B6308 /* SimpleBill */ = {
 			isa = PBXGroup;
 			children = (
+				764CA4DD279546220087BD4C /* Util */,
 				7647AD9427900779001B6308 /* UI */,
 				7647AD932790076D001B6308 /* UserData */,
 				7647AD6427900704001B6308 /* SimpleBillApp.swift */,
@@ -163,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				7647ADA127900A4F001B6308 /* Home */,
+				761D70CD279A9BD90032A4C2 /* CustomUI.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -170,8 +197,10 @@
 		7647ADA127900A4F001B6308 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				764CA4E027954B600087BD4C /* Model */,
 				7647ADA227900A62001B6308 /* SubView */,
 				7647AD9F27900A28001B6308 /* HomeView.swift */,
+				761D70C9279A92E50032A4C2 /* HomeView+Data.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -179,6 +208,7 @@
 		7647ADA227900A62001B6308 /* SubView */ = {
 			isa = PBXGroup;
 			children = (
+				76427C8B27996AE700584AA6 /* ToolBar */,
 				7647AD9B27900973001B6308 /* TopMainCardView.swift */,
 				7647AD9D279009A6001B6308 /* BillCellView.swift */,
 			);
@@ -200,6 +230,24 @@
 				7647AD972790092E001B6308 /* ReadBill.swift */,
 			);
 			path = WriteRead;
+			sourceTree = "<group>";
+		};
+		764CA4DD279546220087BD4C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				764CA4DE279546420087BD4C /* Const.swift */,
+				764CA4E327956EF80087BD4C /* Frame.swift */,
+				764CA4E5279599BB0087BD4C /* Color.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		764CA4E027954B600087BD4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				764CA4E127954B780087BD4C /* HomeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,14 +381,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				7647AD9E279009A6001B6308 /* BillCellView.swift in Sources */,
+				761D70CE279A9BD90032A4C2 /* CustomUI.swift in Sources */,
 				7647ADA627900B13001B6308 /* Backup.swift in Sources */,
 				7647AD7127900706001B6308 /* SimpleBill.xcdatamodeld in Sources */,
 				7647AD9A27900946001B6308 /* BillData.swift in Sources */,
 				7647ADA027900A28001B6308 /* HomeView.swift in Sources */,
+				764CA4DF279546420087BD4C /* Const.swift in Sources */,
 				7647AD6E27900706001B6308 /* Persistence.swift in Sources */,
+				76427C8F27996B2500584AA6 /* CalendarPanel.swift in Sources */,
 				7647AD6727900704001B6308 /* ContentView.swift in Sources */,
+				764CA4E6279599BB0087BD4C /* Color.swift in Sources */,
+				76427C9327996B5E00584AA6 /* SearchBillPanel.swift in Sources */,
 				7647AD6527900704001B6308 /* SimpleBillApp.swift in Sources */,
+				764CA4E227954B780087BD4C /* HomeModel.swift in Sources */,
+				761D70CA279A92E50032A4C2 /* HomeView+Data.swift in Sources */,
 				7647AD9C27900973001B6308 /* TopMainCardView.swift in Sources */,
+				764CA4E427956EF80087BD4C /* Frame.swift in Sources */,
 				7647AD982790092E001B6308 /* ReadBill.swift in Sources */,
 				7647AD9627900920001B6308 /* WriteOneBill.swift in Sources */,
 			);
@@ -500,6 +556,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleBill/Preview Content\"";
@@ -529,6 +587,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleBill/Preview Content\"";
