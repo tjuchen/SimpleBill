@@ -1,22 +1,13 @@
 //
-//  HomeView+Data.swift
+//  SearchBillView+Data.swift
 //  SimpleBill
 //
-//  Created by chenyao on 2022/1/21.
+//  Created by chenyao on 2022/1/26.
 //
 
 import Foundation
 
-extension HomeView {
-    func mainCardData() -> TopMainCardViewModel {
-        let data = TopMainCardViewModel()
-        data.showType = BillDateType.BillDateType_Today
-        data.expenditure = 100.0
-        data.income = 20.0
-        data.isHiddenMoney = false
-        return data
-    }
-     
+extension SearchBillView {
     func searchBillData() -> Array<BillCellViewModel> {
         var dataList = Array<BillCellViewModel>()
         
@@ -46,7 +37,7 @@ extension HomeView {
         data3.money = 15000
         data3.timeInterval = 1611562719
         dataList.append(data3)
-        
+                
         return dataList
     }
 }

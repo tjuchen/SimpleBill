@@ -19,12 +19,3 @@ class TopMainCardViewModel {
     var income: Double = 0.0
     var isHiddenMoney: Bool = false
 }
-
-class BillCellViewModel {
-    var isExpenditure: Bool = true
-    var expenditureType: BillExpenditureType = .BillExpenditureType_Other
-    var incomeType: BillIncomeType = .BillIncomeType_Other
-    var remark: String = ""
-    var money: Double = 0.0
-    var timeInterval: TimeInterval = Date.init(timeIntervalSinceNow: 0).timeIntervalSince1970
-}

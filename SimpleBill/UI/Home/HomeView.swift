@@ -41,19 +41,23 @@ struct HomeView: View {
                                 .font(.callout)
                                 .padding(-20)
                                 .foregroundColor(Color.black)) {
-                        ForEach(0..<billDataModel.count) { item in
-                            BillCellView(model: billDataModel[item])
+                        ForEach(billDataModel) { item in
+                            BillCellView(model: item, modify: modifyBillCell, delete: deleteBillCell)
                                 .listRowSeparator(.visible, edges: .all)
                         }
                     }
-                }.listStyle(.insetGrouped)
-                    .navigationBarTitle("我的记账本")
+                }
+                .listStyle(.insetGrouped)
+                .navigationBarTitle("我的记账本")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button {
                             showCalenderPanel = true
                         } label: {
                             Label("Select Date", systemImage: "calendar")
+                        }
+                        .onChange(of: selectedDate) { newValue in
+                            selectDate()
                         }
                     }
                     ToolbarItem(placement: .navigationBarLeading) {
@@ -71,20 +75,16 @@ struct HomeView: View {
                         }
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button(action: search) {
+                        NavigationLink(destination: SearchBillView()) {
                             Label("Search Bill", systemImage: "magnifyingglass")
                         }
                     }
-                }.foregroundColor(Color.blue)
+                }
+                .foregroundColor(Color.blue)
             }
         }
-        .contextMenu() {
-            CalendarPanel()
-        }
-
+        .calendarPanel(isPresent: $showCalenderPanel, selectedDate: $selectedDate)
     }
-    
-    
 }
 
 extension HomeView {
@@ -116,8 +116,10 @@ extension HomeView {
 
 extension HomeView {
     private func selectDate() {
-        selectedDate = Date()
-        
+        showCalenderPanel = false
+        if (selectedDateType == .BillDateType_Today || selectedDateType == .BillDateType_AnotherDay) {
+            switchSomeDay()
+        }
     }
     
     private func switchSomeDay() {
@@ -139,8 +141,14 @@ extension HomeView {
     private func switchSomeYear() {
         selectedDateType = .BillDateType_SomeYear
     }
+}
+
+extension HomeView {
+    private func deleteBillCell(model: BillCellViewModel) {
+        
+    }
     
-    private func search() {
+    private func modifyBillCell(model: BillCellViewModel) {
         
     }
 }

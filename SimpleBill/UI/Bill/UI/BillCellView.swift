@@ -2,7 +2,7 @@
 //  BillCellView.swift
 //  SimpleBill
 //
-//  Created by chenyao on 2022/1/13.
+//  Created by chenyao on 2022/1/26.
 //
 
 import Foundation
@@ -10,10 +10,16 @@ import SwiftUI
 
 struct BillCellView: View {
     @State private var model: BillCellViewModel = BillCellViewModel()
-    private var tempModel: BillCellViewModel = BillCellViewModel()
+    @State private var showDeleteAlert: Bool = false
     
-    init(model: BillCellViewModel) {
+    private var tempModel: BillCellViewModel = BillCellViewModel()
+    private var modify: (_ model: BillCellViewModel) -> Void = {model in }
+    private var delete: (_ model: BillCellViewModel) -> Void = {model in }
+    
+    init(model: BillCellViewModel, @ViewBuilder modify: @escaping (_ model: BillCellViewModel) -> Void, @ViewBuilder delete: @escaping (_ model: BillCellViewModel) -> Void) {
         self.tempModel = model
+        self.modify = modify
+        self.delete = delete
     }
     
     var body: some View {
@@ -45,9 +51,40 @@ struct BillCellView: View {
                     .font(.footnote)
                     .foregroundColor(Color.colorWithHexString(hexString: "#969696"))
             }
-        }.onAppear {
+        }
+        .onAppear {
             model = tempModel
         }
+        .alert(isPresented: $showDeleteAlert) {
+            Alert(title: Text("是否要删除该条账单记录？"),
+                  message: Text("删除后不可恢复，请三思！"),
+                  primaryButton: .default(
+                    Text("确定"),
+                    action: deleteBillCell
+                  ),
+                  secondaryButton: .default(
+                    Text("取消")
+                  )
+            )
+        }
+        .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+            Button {
+                showDeleteAlert = true
+            } label: {
+                Label("Delete", systemImage: "trash")
+            }
+            .tint(.red)
+            Button {
+                modify(tempModel)
+            } label: {
+                Label("Flag", systemImage: "highlighter")
+            }
+            .tint(.orange)
+        }
+    }
+    
+    private func deleteBillCell() {
+        delete(tempModel)
     }
 }
 

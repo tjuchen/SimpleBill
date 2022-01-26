@@ -10,7 +10,6 @@
 		761D70CA279A92E50032A4C2 /* HomeView+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761D70C9279A92E50032A4C2 /* HomeView+Data.swift */; };
 		761D70CE279A9BD90032A4C2 /* CustomUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761D70CD279A9BD90032A4C2 /* CustomUI.swift */; };
 		76427C8F27996B2500584AA6 /* CalendarPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76427C8E27996B2500584AA6 /* CalendarPanel.swift */; };
-		76427C9327996B5E00584AA6 /* SearchBillPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76427C9227996B5E00584AA6 /* SearchBillPanel.swift */; };
 		7647AD6527900704001B6308 /* SimpleBillApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD6427900704001B6308 /* SimpleBillApp.swift */; };
 		7647AD6727900704001B6308 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD6627900704001B6308 /* ContentView.swift */; };
 		7647AD6927900706001B6308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7647AD6827900706001B6308 /* Assets.xcassets */; };
@@ -24,13 +23,16 @@
 		7647AD982790092E001B6308 /* ReadBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD972790092E001B6308 /* ReadBill.swift */; };
 		7647AD9A27900946001B6308 /* BillData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD9927900946001B6308 /* BillData.swift */; };
 		7647AD9C27900973001B6308 /* TopMainCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD9B27900973001B6308 /* TopMainCardView.swift */; };
-		7647AD9E279009A6001B6308 /* BillCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD9D279009A6001B6308 /* BillCellView.swift */; };
 		7647ADA027900A28001B6308 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD9F27900A28001B6308 /* HomeView.swift */; };
 		7647ADA627900B13001B6308 /* Backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647ADA527900B13001B6308 /* Backup.swift */; };
 		764CA4DF279546420087BD4C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CA4DE279546420087BD4C /* Const.swift */; };
 		764CA4E227954B780087BD4C /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CA4E127954B780087BD4C /* HomeModel.swift */; };
 		764CA4E427956EF80087BD4C /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CA4E327956EF80087BD4C /* Frame.swift */; };
 		764CA4E6279599BB0087BD4C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CA4E5279599BB0087BD4C /* Color.swift */; };
+		767A933D27A140AC00EED690 /* SearchBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A933C27A140AC00EED690 /* SearchBillView.swift */; };
+		767A934027A1440300EED690 /* BillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A933F27A1440300EED690 /* BillModel.swift */; };
+		767A934427A1445100EED690 /* BillCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A934327A1445100EED690 /* BillCellView.swift */; };
+		767A934627A144BA00EED690 /* SearchBillView+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A934527A144BA00EED690 /* SearchBillView+Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +56,6 @@
 		761D70C9279A92E50032A4C2 /* HomeView+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+Data.swift"; sourceTree = "<group>"; };
 		761D70CD279A9BD90032A4C2 /* CustomUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUI.swift; sourceTree = "<group>"; };
 		76427C8E27996B2500584AA6 /* CalendarPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPanel.swift; sourceTree = "<group>"; };
-		76427C9227996B5E00584AA6 /* SearchBillPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBillPanel.swift; sourceTree = "<group>"; };
 		7647AD6127900704001B6308 /* SimpleBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7647AD6427900704001B6308 /* SimpleBillApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBillApp.swift; sourceTree = "<group>"; };
 		7647AD6627900704001B6308 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,13 +72,16 @@
 		7647AD972790092E001B6308 /* ReadBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBill.swift; sourceTree = "<group>"; };
 		7647AD9927900946001B6308 /* BillData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillData.swift; sourceTree = "<group>"; };
 		7647AD9B27900973001B6308 /* TopMainCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMainCardView.swift; sourceTree = "<group>"; };
-		7647AD9D279009A6001B6308 /* BillCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillCellView.swift; sourceTree = "<group>"; };
 		7647AD9F27900A28001B6308 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7647ADA527900B13001B6308 /* Backup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backup.swift; sourceTree = "<group>"; };
 		764CA4DE279546420087BD4C /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		764CA4E127954B780087BD4C /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		764CA4E327956EF80087BD4C /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
 		764CA4E5279599BB0087BD4C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		767A933C27A140AC00EED690 /* SearchBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBillView.swift; sourceTree = "<group>"; };
+		767A933F27A1440300EED690 /* BillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillModel.swift; sourceTree = "<group>"; };
+		767A934327A1445100EED690 /* BillCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillCellView.swift; sourceTree = "<group>"; };
+		767A934527A144BA00EED690 /* SearchBillView+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchBillView+Data.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,15 +109,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		76427C8B27996AE700584AA6 /* ToolBar */ = {
-			isa = PBXGroup;
-			children = (
-				76427C8E27996B2500584AA6 /* CalendarPanel.swift */,
-				76427C9227996B5E00584AA6 /* SearchBillPanel.swift */,
-			);
-			path = ToolBar;
-			sourceTree = "<group>";
-		};
 		7647AD5827900704001B6308 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +183,8 @@
 		7647AD9427900779001B6308 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				767A934127A1442A00EED690 /* Bill */,
+				767A933B27A1406800EED690 /* Search */,
 				7647ADA127900A4F001B6308 /* Home */,
 				761D70CD279A9BD90032A4C2 /* CustomUI.swift */,
 			);
@@ -208,9 +205,8 @@
 		7647ADA227900A62001B6308 /* SubView */ = {
 			isa = PBXGroup;
 			children = (
-				76427C8B27996AE700584AA6 /* ToolBar */,
+				76427C8E27996B2500584AA6 /* CalendarPanel.swift */,
 				7647AD9B27900973001B6308 /* TopMainCardView.swift */,
-				7647AD9D279009A6001B6308 /* BillCellView.swift */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
@@ -248,6 +244,40 @@
 				764CA4E127954B780087BD4C /* HomeModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		767A933B27A1406800EED690 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				767A933C27A140AC00EED690 /* SearchBillView.swift */,
+				767A934527A144BA00EED690 /* SearchBillView+Data.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		767A933E27A143DD00EED690 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				767A933F27A1440300EED690 /* BillModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		767A934127A1442A00EED690 /* Bill */ = {
+			isa = PBXGroup;
+			children = (
+				767A934227A1443600EED690 /* UI */,
+				767A933E27A143DD00EED690 /* Model */,
+			);
+			path = Bill;
+			sourceTree = "<group>";
+		};
+		767A934227A1443600EED690 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				767A934327A1445100EED690 /* BillCellView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,19 +410,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7647AD9E279009A6001B6308 /* BillCellView.swift in Sources */,
 				761D70CE279A9BD90032A4C2 /* CustomUI.swift in Sources */,
+				767A934027A1440300EED690 /* BillModel.swift in Sources */,
 				7647ADA627900B13001B6308 /* Backup.swift in Sources */,
 				7647AD7127900706001B6308 /* SimpleBill.xcdatamodeld in Sources */,
 				7647AD9A27900946001B6308 /* BillData.swift in Sources */,
 				7647ADA027900A28001B6308 /* HomeView.swift in Sources */,
 				764CA4DF279546420087BD4C /* Const.swift in Sources */,
 				7647AD6E27900706001B6308 /* Persistence.swift in Sources */,
+				767A934427A1445100EED690 /* BillCellView.swift in Sources */,
 				76427C8F27996B2500584AA6 /* CalendarPanel.swift in Sources */,
 				7647AD6727900704001B6308 /* ContentView.swift in Sources */,
 				764CA4E6279599BB0087BD4C /* Color.swift in Sources */,
-				76427C9327996B5E00584AA6 /* SearchBillPanel.swift in Sources */,
+				767A933D27A140AC00EED690 /* SearchBillView.swift in Sources */,
 				7647AD6527900704001B6308 /* SimpleBillApp.swift in Sources */,
+				767A934627A144BA00EED690 /* SearchBillView+Data.swift in Sources */,
 				764CA4E227954B780087BD4C /* HomeModel.swift in Sources */,
 				761D70CA279A92E50032A4C2 /* HomeView+Data.swift in Sources */,
 				7647AD9C27900973001B6308 /* TopMainCardView.swift in Sources */,

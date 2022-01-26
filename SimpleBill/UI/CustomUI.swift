@@ -43,4 +43,28 @@ extension View {
             self
         }
     }
+    
+    @ViewBuilder func isHidden(_ hidden: Bool, remove: Bool = false) -> some View {
+        if hidden {
+            if !remove {
+                self.hidden()
+            }
+        } else {
+            self
+        }
+    }
+}
+
+struct BlurEffectView: UIViewRepresentable {
+    
+    /// The style of the Blut Effect View
+    var style: UIBlurEffect.Style = .systemMaterial
+    
+    func makeUIView(context: Context) -> UIVisualEffectView {
+        return UIVisualEffectView(effect: UIBlurEffect(style: style))
+    }
+    
+    func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
+        uiView.effect = UIBlurEffect(style: style)
+    }
 }
