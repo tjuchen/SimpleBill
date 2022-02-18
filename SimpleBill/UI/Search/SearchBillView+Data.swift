@@ -8,36 +8,49 @@
 import Foundation
 
 extension SearchBillView {
-    func searchBillData() -> Array<BillCellViewModel> {
-        var dataList = Array<BillCellViewModel>()
+    func searchBillData(text: String) -> Array<BillCellViewModel> {
+        var model = Array<BillCellViewModel>()
         
-        let data1 = BillCellViewModel()
-        data1.index = 0
-        data1.isExpenditure = true
-        data1.expenditureType = .BillExpenditureType_Shop
-        data1.remark = "方便面"
-        data1.money = 41.8
-        data1.timeInterval = 1643185120
-        dataList.append(data1)
+        if (text.elementsEqual("")) {
+            return model
+        }
         
-        let data2 = BillCellViewModel()
-        data2.index = 1
-        data2.isExpenditure = false
-        data2.incomeType = .BillIncomeType_Salary
-        data2.remark = ""
-        data2.money = 15000
-        data2.timeInterval = 1643098719
-        dataList.append(data2)
-        
-        let data3 = BillCellViewModel()
-        data3.index = 2
-        data3.isExpenditure = true
-        data3.expenditureType = .BillExpenditureType_House
-        data3.remark = "房贷"
-        data3.money = 15000
-        data3.timeInterval = 1611562719
-        dataList.append(data3)
-                
-        return dataList
+        fetchRequest.predicate = getPredicate(text: text)
+        do {
+            let fetchedObjects = try viewContext.fetch(fetchRequest)
+            for index in 0..<fetchedObjects.count {
+                let temp = BillCellViewModel()
+                let bill = fetchedObjects[index]
+                temp.index = index
+                temp.billID = bill.billID ?? ""
+                temp.isExpenditure = bill.isExpenditure
+                temp.billType = bill.billType ?? "expenditure_other"
+                temp.remark = bill.remark ?? ""
+                temp.money = bill.money
+                temp.timestamp = TimeInterval(bill.timestamp)
+                temp.title = bill.title ?? ""
+                model.append(temp)
+            }
+        } catch {
+            fatalError("读取错误：\(error)")
+        }
+        return model
+    }
+    
+    func getPredicate(text: String) -> NSPredicate {
+        return NSPredicate(format: "title == %@ OR remark == %@", text, text)
+    }
+    
+    func deleteOneBill(model: BillCellViewModel) {
+        fetchRequest.predicate = NSPredicate(format: "billID == %@", model.billID)
+        do {
+            let fetchedObjects = try viewContext.fetch(fetchRequest)
+            for info in fetchedObjects{
+                viewContext.delete(info)
+            }
+            try! viewContext.save()
+        } catch {
+            fatalError("删除错误：\(error)")
+        }
     }
 }

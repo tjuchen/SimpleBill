@@ -9,10 +9,30 @@ import Foundation
 
 class BillCellViewModel: Identifiable {
     var index: Int = 0
+    var billID: String = ""
     var isExpenditure: Bool = true
-    var expenditureType: BillExpenditureType = .BillExpenditureType_Other
-    var incomeType: BillIncomeType = .BillIncomeType_Other
+    var billType: String = "expenditure_other"
+    var title: String = ""
     var remark: String = ""
     var money: Double = 0.0
-    var timeInterval: TimeInterval = Date.init(timeIntervalSinceNow: 0).timeIntervalSince1970
+    var timestamp: TimeInterval = Date.init(timeIntervalSinceNow: 0).timeIntervalSince1970
+}
+
+extension BillCellViewModel {
+    func findTitle() -> String {
+        return self.isExpenditure ? findExpenditureTitle() : findIncomeTitle()
+    }
+    
+    private func findExpenditureTitle() -> String {
+        return BillConfig.defaultBillExpenditureTypeConfig()[self.billType]!
+    }
+    
+    private func findIncomeTitle() -> String {
+        return BillConfig.defaultBillIncomeTypeConfig()[self.billType]!
+    }
+}
+
+class BillTypeModel: Identifiable {
+    var title: String = ""
+    var iconName: String = ""
 }

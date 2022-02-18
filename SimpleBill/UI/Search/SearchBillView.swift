@@ -7,30 +7,45 @@
 
 import Foundation
 import SwiftUI
+import CoreData
 
 struct SearchBillView: View {
+    @Environment(\.managedObjectContext) var viewContext
+    
     @State private var searchText = ""
     @State private var searchBillDataModel = Array<BillCellViewModel>()
+    @State private var refreshing: Bool = true
+    
+    var fetchRequest: NSFetchRequest<Bill>
+    init() {
+        self.fetchRequest = NSFetchRequest<Bill>(entityName:"Bill")
+        self.fetchRequest.sortDescriptors = [NSSortDescriptor(keyPath: \Bill.timestamp, ascending: false)]
+    }
     
     var body: some View {
         VStack {
             SearchBar(text: $searchText)
-            List(searchBillDataModel) {
-                BillCellView(model: $0, modify: modifyBillCell, delete: deleteBillCell)
-                    .listRowSeparator(.visible, edges: .all)
+                .onChange(of: searchText) { newValue in
+                    searchBillDataModel = searchBillData(text: searchText)
+                }
+            List {
+                ForEach(searchBillDataModel) { item in
+                    BillCellView(model: item, destinationView: AnyView(BillDetailView(refreshing: $refreshing, originModel: item)), delete: deleteBillCell)
+                        .listRowSeparator(.visible, edges: .all)
+                }
             }
         }
         .navigationBarTitle(Text("搜索"), displayMode: .inline)
         .onAppear {
-            searchBillDataModel = searchBillData()
+            searchBillDataModel = searchBillData(text: searchText)
         }
     }
 }
 
 extension SearchBillView {
     private func deleteBillCell(model: BillCellViewModel) {
-        searchBillDataModel.remove(at: model.index)
-        searchBillDataModel = searchBillData()
+        deleteOneBill(model: model)
+        searchBillDataModel = searchBillData(text: searchText)
     }
     
     private func modifyBillCell(model: BillCellViewModel) {
@@ -50,7 +65,7 @@ struct SearchBar: UIViewRepresentable {
         }
 
         func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            text = searchText
+            self.text = searchText
         }
     }
     func makeCoordinator() -> SearchBar.Coordinator {

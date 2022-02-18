@@ -14,7 +14,6 @@ class TopMainCardViewCellModel {
 }
 
 class TopMainCardViewModel {
-    var showType: BillDateType = .BillDateType_Today
     var expenditure: Double = 0.0
     var income: Double = 0.0
     var isHiddenMoney: Bool = false

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		761D70CA279A92E50032A4C2 /* HomeView+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761D70C9279A92E50032A4C2 /* HomeView+Data.swift */; };
 		761D70CE279A9BD90032A4C2 /* CustomUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761D70CD279A9BD90032A4C2 /* CustomUI.swift */; };
+		7640DC8E27BA6503002986B1 /* WriteReadBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7640DC8D27BA6503002986B1 /* WriteReadBill.swift */; };
 		76427C8F27996B2500584AA6 /* CalendarPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76427C8E27996B2500584AA6 /* CalendarPanel.swift */; };
 		7647AD6527900704001B6308 /* SimpleBillApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD6427900704001B6308 /* SimpleBillApp.swift */; };
 		7647AD6727900704001B6308 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD6627900704001B6308 /* ContentView.swift */; };
@@ -19,8 +20,6 @@
 		7647AD7B27900706001B6308 /* SimpleBillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD7A27900706001B6308 /* SimpleBillTests.swift */; };
 		7647AD8527900706001B6308 /* SimpleBillUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD8427900706001B6308 /* SimpleBillUITests.swift */; };
 		7647AD8727900706001B6308 /* SimpleBillUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD8627900706001B6308 /* SimpleBillUITestsLaunchTests.swift */; };
-		7647AD9627900920001B6308 /* WriteOneBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD9527900920001B6308 /* WriteOneBill.swift */; };
-		7647AD982790092E001B6308 /* ReadBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD972790092E001B6308 /* ReadBill.swift */; };
 		7647AD9A27900946001B6308 /* BillData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD9927900946001B6308 /* BillData.swift */; };
 		7647AD9C27900973001B6308 /* TopMainCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD9B27900973001B6308 /* TopMainCardView.swift */; };
 		7647ADA027900A28001B6308 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647AD9F27900A28001B6308 /* HomeView.swift */; };
@@ -29,6 +28,10 @@
 		764CA4E227954B780087BD4C /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CA4E127954B780087BD4C /* HomeModel.swift */; };
 		764CA4E427956EF80087BD4C /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CA4E327956EF80087BD4C /* Frame.swift */; };
 		764CA4E6279599BB0087BD4C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764CA4E5279599BB0087BD4C /* Color.swift */; };
+		7657F39D27B653B90035DC9D /* BillDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7657F39C27B653B90035DC9D /* BillDetailView.swift */; };
+		7657F39F27B66E600035DC9D /* BillTypeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7657F39E27B66E600035DC9D /* BillTypeSelectView.swift */; };
+		7657F3A127B671BF0035DC9D /* BillConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7657F3A027B671BF0035DC9D /* BillConfig.swift */; };
+		7676507E27BF865C003F30CC /* BillDetailView+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676507D27BF865C003F30CC /* BillDetailView+Data.swift */; };
 		767A933D27A140AC00EED690 /* SearchBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A933C27A140AC00EED690 /* SearchBillView.swift */; };
 		767A934027A1440300EED690 /* BillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A933F27A1440300EED690 /* BillModel.swift */; };
 		767A934427A1445100EED690 /* BillCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A934327A1445100EED690 /* BillCellView.swift */; };
@@ -55,6 +58,7 @@
 /* Begin PBXFileReference section */
 		761D70C9279A92E50032A4C2 /* HomeView+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+Data.swift"; sourceTree = "<group>"; };
 		761D70CD279A9BD90032A4C2 /* CustomUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUI.swift; sourceTree = "<group>"; };
+		7640DC8D27BA6503002986B1 /* WriteReadBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReadBill.swift; sourceTree = "<group>"; };
 		76427C8E27996B2500584AA6 /* CalendarPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPanel.swift; sourceTree = "<group>"; };
 		7647AD6127900704001B6308 /* SimpleBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7647AD6427900704001B6308 /* SimpleBillApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBillApp.swift; sourceTree = "<group>"; };
@@ -68,8 +72,6 @@
 		7647AD8027900706001B6308 /* SimpleBillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleBillUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7647AD8427900706001B6308 /* SimpleBillUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBillUITests.swift; sourceTree = "<group>"; };
 		7647AD8627900706001B6308 /* SimpleBillUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBillUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		7647AD9527900920001B6308 /* WriteOneBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteOneBill.swift; sourceTree = "<group>"; };
-		7647AD972790092E001B6308 /* ReadBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBill.swift; sourceTree = "<group>"; };
 		7647AD9927900946001B6308 /* BillData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillData.swift; sourceTree = "<group>"; };
 		7647AD9B27900973001B6308 /* TopMainCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMainCardView.swift; sourceTree = "<group>"; };
 		7647AD9F27900A28001B6308 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,10 @@
 		764CA4E127954B780087BD4C /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		764CA4E327956EF80087BD4C /* Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frame.swift; sourceTree = "<group>"; };
 		764CA4E5279599BB0087BD4C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		7657F39C27B653B90035DC9D /* BillDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillDetailView.swift; sourceTree = "<group>"; };
+		7657F39E27B66E600035DC9D /* BillTypeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTypeSelectView.swift; sourceTree = "<group>"; };
+		7657F3A027B671BF0035DC9D /* BillConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillConfig.swift; sourceTree = "<group>"; };
+		7676507D27BF865C003F30CC /* BillDetailView+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BillDetailView+Data.swift"; sourceTree = "<group>"; };
 		767A933C27A140AC00EED690 /* SearchBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBillView.swift; sourceTree = "<group>"; };
 		767A933F27A1440300EED690 /* BillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillModel.swift; sourceTree = "<group>"; };
 		767A934327A1445100EED690 /* BillCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillCellView.swift; sourceTree = "<group>"; };
@@ -222,8 +228,7 @@
 		7647ADA427900A83001B6308 /* WriteRead */ = {
 			isa = PBXGroup;
 			children = (
-				7647AD9527900920001B6308 /* WriteOneBill.swift */,
-				7647AD972790092E001B6308 /* ReadBill.swift */,
+				7640DC8D27BA6503002986B1 /* WriteReadBill.swift */,
 			);
 			path = WriteRead;
 			sourceTree = "<group>";
@@ -246,6 +251,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		7676507C27BF8645003F30CC /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				7657F39C27B653B90035DC9D /* BillDetailView.swift */,
+				7676507D27BF865C003F30CC /* BillDetailView+Data.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
 		767A933B27A1406800EED690 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				767A933F27A1440300EED690 /* BillModel.swift */,
+				7657F3A027B671BF0035DC9D /* BillConfig.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,7 +290,9 @@
 		767A934227A1443600EED690 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7676507C27BF8645003F30CC /* DetailView */,
 				767A934327A1445100EED690 /* BillCellView.swift */,
+				7657F39E27B66E600035DC9D /* BillTypeSelectView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -412,11 +429,15 @@
 			files = (
 				761D70CE279A9BD90032A4C2 /* CustomUI.swift in Sources */,
 				767A934027A1440300EED690 /* BillModel.swift in Sources */,
+				7676507E27BF865C003F30CC /* BillDetailView+Data.swift in Sources */,
+				7657F39F27B66E600035DC9D /* BillTypeSelectView.swift in Sources */,
 				7647ADA627900B13001B6308 /* Backup.swift in Sources */,
+				7657F3A127B671BF0035DC9D /* BillConfig.swift in Sources */,
 				7647AD7127900706001B6308 /* SimpleBill.xcdatamodeld in Sources */,
 				7647AD9A27900946001B6308 /* BillData.swift in Sources */,
 				7647ADA027900A28001B6308 /* HomeView.swift in Sources */,
 				764CA4DF279546420087BD4C /* Const.swift in Sources */,
+				7640DC8E27BA6503002986B1 /* WriteReadBill.swift in Sources */,
 				7647AD6E27900706001B6308 /* Persistence.swift in Sources */,
 				767A934427A1445100EED690 /* BillCellView.swift in Sources */,
 				76427C8F27996B2500584AA6 /* CalendarPanel.swift in Sources */,
@@ -424,13 +445,12 @@
 				764CA4E6279599BB0087BD4C /* Color.swift in Sources */,
 				767A933D27A140AC00EED690 /* SearchBillView.swift in Sources */,
 				7647AD6527900704001B6308 /* SimpleBillApp.swift in Sources */,
+				7657F39D27B653B90035DC9D /* BillDetailView.swift in Sources */,
 				767A934627A144BA00EED690 /* SearchBillView+Data.swift in Sources */,
 				764CA4E227954B780087BD4C /* HomeModel.swift in Sources */,
 				761D70CA279A92E50032A4C2 /* HomeView+Data.swift in Sources */,
 				7647AD9C27900973001B6308 /* TopMainCardView.swift in Sources */,
 				764CA4E427956EF80087BD4C /* Frame.swift in Sources */,
-				7647AD982790092E001B6308 /* ReadBill.swift in Sources */,
-				7647AD9627900920001B6308 /* WriteOneBill.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

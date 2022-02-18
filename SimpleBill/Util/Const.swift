@@ -60,22 +60,22 @@ enum BillDateType {
     case BillDateType_SomeYear
 }
 
-enum BillExpenditureType {
-    case BillExpenditureType_Shop
-    case BillExpenditureType_Food
-    case BillExpenditureType_Entertainment
-    case BillExpenditureType_Transportation
-    case BillExpenditureType_Medical
-    case BillExpenditureType_House
-    case BillExpenditureType_Communication
-    case BillExpenditureType_Learning
-    case BillExpenditureType_Other
-}
-
-enum BillIncomeType {
-    case BillIncomeType_Salary
-    case BillIncomeType_Bonus
-    case BillIncomeType_Investment
-    case BillIncomeType_Windfall
-    case BillIncomeType_Other
-}
+//enum BillExpenditureType {
+//    case BillExpenditureType_Shop
+//    case BillExpenditureType_Food
+//    case BillExpenditureType_Entertainment
+//    case BillExpenditureType_Transportation
+//    case BillExpenditureType_Medical
+//    case BillExpenditureType_House
+//    case BillExpenditureType_Communication
+//    case BillExpenditureType_Learning
+//    case BillExpenditureType_Other
+//}
+//
+//enum BillIncomeType {
+//    case BillIncomeType_Salary
+//    case BillIncomeType_Bonus
+//    case BillIncomeType_Investment
+//    case BillIncomeType_Windfall
+//    case BillIncomeType_Other
+//}

@@ -7,47 +7,63 @@
 
 import Foundation
 import SwiftUI
+import CoreData
 
 private var kDateType = "kDateType"
 private var kDate = "kDate"
 
 struct HomeView: View {
+    @Environment(\.managedObjectContext) var viewContext
+    
     @State private var selectedDateType: BillDateType = .BillDateType_Today
     @State private var selectedDate: Date = Date()
     
     @State private var showCalenderPanel: Bool = false
     @State private var showSwitchAlert: Bool = false
     
+    @State private var refreshing: Bool = true
+        
+    var fetchRequest: NSFetchRequest<Bill>
+    init() {
+        self.fetchRequest = NSFetchRequest<Bill>(entityName:"Bill")
+        self.fetchRequest.sortDescriptors = [NSSortDescriptor(keyPath: \Bill.timestamp, ascending: false)]
+    }
+    
     private var mainCardDataModel: TopMainCardViewModel {
         get {
             return mainCardData()
         }
     }
-    
+        
     private var billDataModel: Array<BillCellViewModel> {
         get {
-            return searchBillData()
+            return refreshing ? searchBillData(type: selectedDateType, date: selectedDate) : Array()
         }
     }
     
     var body: some View {
         VStack {
             NavigationView {
-                List {
-                    Section() {
-                        TopMainCardView(model: mainCardDataModel)
-                    }
-                    Section(header: Text(sectionHeader())
-                                .font(.callout)
-                                .padding(-20)
-                                .foregroundColor(Color.black)) {
-                        ForEach(billDataModel) { item in
-                            BillCellView(model: item, modify: modifyBillCell, delete: deleteBillCell)
-                                .listRowSeparator(.visible, edges: .all)
+                VStack {
+                    List {
+                        Section() {
+                            TopMainCardView(model: mainCardDataModel)
+                        }
+                        Section(header: Text(sectionHeader())
+                                    .font(.callout)
+                                    .padding(-20)
+                                    .foregroundColor(Color.black)) {
+                            ForEach(billDataModel) { item in
+                                BillCellView(model: item, destinationView: AnyView(BillDetailView(refreshing: $refreshing, originModel: item)), delete: deleteBillCell)
+                                    .listRowSeparator(.visible, edges: .all)
+                            }
                         }
                     }
+                    .listStyle(.insetGrouped)
+                    NavigationLink(destination: BillDetailView(refreshing: $refreshing, originModel: BillCellViewModel())) {
+                        Label("记一笔", systemImage: "pencil")
+                    }
                 }
-                .listStyle(.insetGrouped)
                 .navigationBarTitle("我的记账本")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
@@ -105,12 +121,9 @@ extension HomeView {
             break
         }
         
-        let expenditureData = billDataModel.filter{ $0.isExpenditure }
-        let incomeData = billDataModel.filter{ !$0.isExpenditure }
-        let expenditure = expenditureData.map({$0.money}).reduce(0, +)
-        let income = incomeData.map({$0.money}).reduce(0, +)
+        let billsResult = calculateBill(bills: billDataModel)
         
-        return String(format: str, expenditure, income)
+        return String(format: str, billsResult.expenditure, billsResult.income)
     }
 }
 
@@ -145,11 +158,23 @@ extension HomeView {
 
 extension HomeView {
     private func deleteBillCell(model: BillCellViewModel) {
-        
+        refreshing = false
+        deleteOneBill(model: model)
+        refreshing = true
     }
     
-    private func modifyBillCell(model: BillCellViewModel) {
-        
-    }
+//    private func modifyBillCell(model: BillCellViewModel) {
+//        let screnDelegate: UIWindowSceneDelegate? = {
+//                       var uiScreen: UIScene?
+//                       UIApplication.shared.connectedScenes.forEach { (screen) in
+//                           uiScreen = screen
+//                       }
+//                       return (uiScreen?.delegate as? UIWindowSceneDelegate)
+//                   }()
+//
+//
+//             screnDelegate?.window!?.rootViewController  = UIHostingController(rootView: BillDetailView(refreshing: $refreshing, originModel: model));
+//    }
 }
+
 
